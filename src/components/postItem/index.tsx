@@ -13,7 +13,7 @@ export default function PostItem({
   link,
 }: PostItemProps) {
   return (
-    <Link to={link} className={styles.postItemWrapper}>
+    <Link to={link}>
       <article className={styles.postItem}>
         <div className={styles.categoryWrapper}>
           {categories?.map(category => (

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from 'components/layout'
-import * as styles from './styles.css'
+import * as styles from '../../styles/styles.css'
 
 export default function AboutPage() {
   return (
