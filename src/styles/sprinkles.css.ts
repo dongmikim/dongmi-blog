@@ -3,9 +3,9 @@ import { themes } from './themes.css'
 
 const space = {
   none: 0,
-  small: '4px',
-  medium: '8px',
-  large: '16px',
+  sm: '4px',
+  md: '8px',
+  lg: '16px',
 }
 
 const responsiveProperties = defineProperties({
@@ -13,6 +13,7 @@ const responsiveProperties = defineProperties({
     mobile: { '@media': 'screen and (max-width: 576px)' },
     tablet: { '@media': 'screen and (min-width: 577px)' },
     desktop: { '@media': 'screen and (min-width: 769px)' },
+    desktopLg: { '@media': 'screen and (min-width: 1440px)' },
   },
   defaultCondition: 'mobile',
   properties: {

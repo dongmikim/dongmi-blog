@@ -14,7 +14,8 @@ export const toc = style([
     display: {
       mobile: 'none',
       tablet: 'none',
-      desktop: 'block',
+      desktop: 'none',
+      desktopLg: 'block',
     },
   }),
   {
