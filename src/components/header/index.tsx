@@ -12,8 +12,8 @@ export default function Header({ siteTitle }: HeaderProps) {
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
         <strong>{siteTitle}</strong>
-        <span className={styles.textBlue}>:</span>{' '}
-        <span className={styles.textBeige}>&lt;👩🏻‍💻&gt;</span>
+        <span className={styles.textGray}>:</span>{' '}
+        <span className={styles.textBlue}>&lt;👩🏻‍💻&gt;</span>
       </Link>
 
       <nav className={styles.nav}>

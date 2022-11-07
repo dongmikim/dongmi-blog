@@ -37,8 +37,8 @@ export const navLinkActive = style({
   color: colors.blue,
 })
 
-export const textBeige = style([
-  { color: colors.beige },
+export const textGray = style([
+  { color: colors.gray },
   sprinkles({
     display: {
       mobile: 'none',

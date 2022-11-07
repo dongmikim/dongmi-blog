@@ -1,9 +1,9 @@
 import { createGlobalTheme } from '@vanilla-extract/css'
 
 export const colors = {
-  blue: '#2c6b96',
-  beige: '#e7ccb1',
-  skyblue: '#b5dcdd',
+  blue: '#0092db',
+  beige: '#ffea04',
+  skyblue: '#38b8ef',
   gray: '#8d9da3',
   red: '#ba3f724',
   orange: '#ce9e5b',
