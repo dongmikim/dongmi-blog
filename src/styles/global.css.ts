@@ -29,3 +29,8 @@ globalStyle('a', {
 })
 
 globalStyle('ol, ul', { listStyle: 'none' })
+
+globalStyle('hr', {
+  marginTop: 100,
+  marginBottom: 100,
+})
