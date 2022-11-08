@@ -1,7 +1,8 @@
 import React from 'react'
 
-import * as styles from './styles.css'
 import { StaticImage } from 'gatsby-plugin-image'
+
+import * as styles from './styles.css'
 
 type PostHeaderProps = {
   categories: string[]
@@ -18,7 +19,11 @@ export default function PostHeader({
     <>
       <div className={styles.categoryWrapper}>
         {categories?.map(category => {
-          return <span className={styles.category}>{category}</span>
+          return (
+            <span className={styles.category} key={`category-${category}`}>
+              {category}
+            </span>
+          )
         })}
       </div>
       <h1 className={styles.postTitle}>{title}</h1>

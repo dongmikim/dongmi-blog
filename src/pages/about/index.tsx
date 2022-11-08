@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <main className={styles.container}>
-        <p className={styles.intro}>
+        <div className={styles.intro}>
           안녕하세요. <br />
           <h1>프론트엔드 엔지니어 김동미</h1>입니다. <br />
           내가 만드는 서비스에 기여하고, <br />
@@ -21,7 +21,7 @@ export default function AboutPage() {
           <small className={styles.tmi}>
             그리고 평양냉면과 러닝을 좋아해요!
           </small>
-        </p>
+        </div>
         <section className={styles.section}>
           <h2>Experience</h2>
           <ul>

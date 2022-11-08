@@ -17,7 +17,9 @@ export default function PostItem({
       <article className={styles.postItem}>
         <div className={styles.categoryWrapper}>
           {categories?.map(category => (
-            <span className={styles.category}>{category}</span>
+            <span className={styles.category} key={`${title}-${category}`}>
+              {category}
+            </span>
           ))}
         </div>
         <h2 className={styles.postTitle}>{title}</h2>

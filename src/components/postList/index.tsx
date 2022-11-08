@@ -21,7 +21,7 @@ export default function PostList({ posts }: PostListProps) {
             },
           }: PostListItemType) => (
             <li key={id}>
-              <PostItem {...frontmatter} link={slug} key={id} />
+              <PostItem {...frontmatter} link={slug} />
             </li>
           ),
         )}
