@@ -16,3 +16,11 @@ export type PostListItemType = {
     frontmatter: PostFrontmatterType
   }
 }
+
+export type PostTemplateType = {
+  data: {
+    allMarkdownRemark: {
+      edges: PostListItemType[]
+    }
+  }
+}

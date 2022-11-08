@@ -1,26 +1,36 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React from 'react'
+
 import { graphql } from 'gatsby'
 
 import Layout from 'components/layout'
 import PostContent from 'components/postContent'
-import * as styles from './post.css'
 import TableOfContents from 'components/toc'
 import PostHeader from 'components/postHeader'
-import { PostListItemType } from 'types/postItem'
+import Seo from 'components/seo'
+import { PostTemplateType } from 'types/postItem'
 
-type PostTemplateProps = {
+import * as styles from './post.css'
+
+export function Head({
   data: {
-    allMarkdownRemark: {
-      edges: PostListItemType[]
-    }
-  }
+    allMarkdownRemark: { edges },
+  },
+}: PostTemplateType) {
+  const { node } = edges[0]
+
+  return (
+    <Seo
+      title={node.frontmatter.title}
+      description={node.frontmatter.summary}
+    />
+  )
 }
 
 export default function PostTemplate({
   data: {
     allMarkdownRemark: { edges },
   },
-}: PostTemplateProps) {
+}: PostTemplateType) {
   const {
     node: {
       html,

@@ -1,6 +1,5 @@
-import * as React from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-
 import Layout from 'components/layout'
 import Seo from 'components/seo'
 import PostList from 'components/postList'
@@ -14,6 +13,10 @@ type IndexPageProps = {
   }
 }
 
+export function Head() {
+  return <Seo title="Posts" />
+}
+
 function IndexPage({
   data: {
     allMarkdownRemark: { edges },
@@ -21,7 +24,6 @@ function IndexPage({
 }: IndexPageProps) {
   return (
     <Layout>
-      {/* <Seo title="Dongmi Blog" description={''} /> */}
       <h1 style={{ display: 'none' }}>Posts</h1>
       <PostList posts={edges} />
     </Layout>

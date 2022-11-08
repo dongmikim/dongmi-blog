@@ -1,7 +1,13 @@
 import React from 'react'
 
 import Layout from 'components/layout'
+import Seo from 'components/seo'
+
 import * as styles from '../../styles/styles.css'
+
+export function Head() {
+  return <Seo title={'About'} description={'김동미 소개와 경력'} />
+}
 
 export default function AboutPage() {
   return (
