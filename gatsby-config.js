@@ -13,7 +13,6 @@ module.exports = {
         allExtensions: true,
       },
     },
-    // `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,6 +20,12 @@ module.exports = {
         name: `posts`,
         path: `${__dirname}/posts`,
         ignore: [`**/\.*`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/favicon-32x32.png`,
       },
     },
     {
