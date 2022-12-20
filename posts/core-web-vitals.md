@@ -14,7 +14,7 @@ _어쩌고를 써야 메모리를 덜 먹어요. 저쩌고를 해야 성능이 �
 
 ## Core Web Vitals
 
-<img src="./core-web-vitals-01.png" width="450">
+<img src="./images/core-web-vitals-01.png" width="450">
 
 코어 웹 바이탈은 로딩 속도, 모바일 친화성, https 제공 등과 같은 **사용자의 경험**에 영향을 미치는 부분들 중에서 구글이 중요하다고 강조하는 3가지 핵심 지표를 의미합니다.
 
@@ -24,7 +24,7 @@ _어쩌고를 써야 메모리를 덜 먹어요. 저쩌고를 해야 성능이 �
 - FID - 상호작용
 - CLS - 시각적 안정성
 
-![core-web-vitals-matrix-meaning](./core-web-vitals-02.png)
+![core-web-vitals-matrix-meaning](./images/core-web-vitals-02.png)
 
 ### LCP (Largest Contentful Paint)
 
@@ -33,14 +33,14 @@ _어쩌고를 써야 메모리를 덜 먹어요. 저쩌고를 해야 성능이 �
 
 #### 예시
 
-![Instagram](./core-web-vitals-03.png)
+![Instagram](./images/core-web-vitals-03.png)
 
 ✅ 주요 컨텐츠가 로고 이미지일 때
 인스타그램 로고가 초반에 먼저 로드되고, 나머지 콘텐츠가 로드된 후에도 가장 큰 요소로 로고가 남아 있습니다.
 
 <br />
 
-![CNN](./core-web-vitals-04.png)
+![CNN](./images/core-web-vitals-04.png)
 
 ✅ 모든 콘텐츠가 로드 되면서 큰 요소가 변경되는 예
 
@@ -56,7 +56,7 @@ _어쩌고를 써야 메모리를 덜 먹어요. 저쩌고를 해야 성능이 �
 
 즉, FID는 브라우저가 실제로 **첫번째 이벤트 핸들러 처리를 시작할 수 있을때까지**의 시간을 의미
 
-![core-web-vitals-graph](./core-web-vitals-05.png)
+![core-web-vitals-graph](./images/core-web-vitals-05.png)
 
 위의 그래프에서 여러가지 지표의 발생시점을 확인할 수 있습니다.
 처음 컨텐츠가 로드되는 시점인 FCP가 있고,  
@@ -71,7 +71,7 @@ _어쩌고를 써야 메모리를 덜 먹어요. 저쩌고를 해야 성능이 �
 
 #### 예시
 
-<img src="./core-web-vitals-06.png" width="450">
+<img src="./images/core-web-vitals-06.png" width="450">
 
 ✅ 초기의 위치랑 어떻게 레이아웃이 틀어지는 지
 
