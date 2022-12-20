@@ -42,8 +42,11 @@ export default function PostTemplate({
   return (
     <Layout>
       <article className={styles.postWrapper}>
-        <PostHeader categories={categories} title={title} date={date} />
-        <PostContent html={html} />
+        <div className={styles.postInner}>
+          <PostHeader categories={categories} title={title} date={date} />
+          <PostContent html={html} />
+        </div>
+
         <TableOfContents content={tableOfContents} />
       </article>
     </Layout>
