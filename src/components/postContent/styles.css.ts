@@ -92,3 +92,16 @@ globalStyle(`${postContent} blockquote p`, {
   marginTop: spacing.sm,
   marginBottom: spacing.sm,
 })
+
+globalStyle(`${postContent} blockquote p`, {
+  marginTop: spacing.sm,
+  marginBottom: spacing.sm,
+})
+
+globalStyle(`${postContent} p + ul`, { marginTop: '-15px' })
+
+globalStyle(`${postContent} .gatsby-resp-image-wrapper`, {
+  marginRight: 'inherit !important',
+  marginLeft: 'inherit !important',
+  maxWidth: '650px !important',
+})

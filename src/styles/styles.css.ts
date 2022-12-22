@@ -30,11 +30,15 @@ globalStyle(`${intro} h1`, {
   fontSize: fontSize.xxxl,
 })
 
-export const tmi = style({
+export const desc = style({
   display: 'block',
   paddingTop: spacing.md,
   fontSize: fontSize.md,
   color: color.gray,
+})
+
+globalStyle(`${desc} p`, {
+  marginBottom: spacing.md,
 })
 
 export const section = style({
