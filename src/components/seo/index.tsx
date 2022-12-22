@@ -43,7 +43,10 @@ function Seo({ description, title }: SeoProps) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={ogImage.images.fallback.src} />
+      <meta
+        property="og:image"
+        content={`${site.siteMetadata.siteUrl}${ogImage.images.fallback.src}`}
+      />
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
