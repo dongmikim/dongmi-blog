@@ -16,6 +16,7 @@ function Seo({ description, title }: SeoProps) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -24,6 +25,7 @@ function Seo({ description, title }: SeoProps) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const ogImage = `${site.siteMetadata?.siteUrl}/images/og-img.png`
 
   return (
     <>
@@ -32,6 +34,7 @@ function Seo({ description, title }: SeoProps) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content={ogImage} />
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"

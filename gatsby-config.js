@@ -3,7 +3,7 @@ module.exports = {
     title: `Dongmi Log`,
     description: `동미의 개발 블로그`,
     author: `@DongmiKim`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://dongmi.dev/`,
   },
   plugins: [
     {
@@ -20,6 +20,13 @@ module.exports = {
         name: `posts`,
         path: `${__dirname}/posts`,
         ignore: [`**/\.*`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/images`,
       },
     },
     {
