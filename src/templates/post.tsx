@@ -7,6 +7,7 @@ import PostContent from 'components/postContent'
 import TableOfContents from 'components/toc'
 import PostHeader from 'components/postHeader'
 import Seo from 'components/seo'
+import Comment from 'components/comment'
 import { PostTemplateType } from 'types/postItem'
 
 import * as styles from './post.css'
@@ -42,13 +43,16 @@ export default function PostTemplate({
   return (
     <Layout>
       <article className={styles.postWrapper}>
-        <div className={styles.postInner}>
+        <div>
           <PostHeader categories={categories} title={title} date={date} />
           <PostContent html={html} />
         </div>
 
         <TableOfContents content={tableOfContents} />
       </article>
+      <footer>
+        <Comment />
+      </footer>
     </Layout>
   )
 }
