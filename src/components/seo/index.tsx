@@ -8,7 +8,7 @@ type SeoProps = {
 }
 
 function Seo({ description, title }: SeoProps) {
-  const { site } = useStaticQuery(
+  const { site, featuredImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,13 +19,22 @@ function Seo({ description, title }: SeoProps) {
             siteUrl
           }
         }
+        featuredImage: file(
+          absolutePath: { glob: "**/src/images/og-img.png" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED, width: 1200)
+          }
+        }
       }
     `,
   )
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const ogImage = `${site.siteMetadata?.siteUrl}/images/og-img.png`
+  const ogImage = featuredImage?.childImageSharp?.gatsbyImageData
+
+  console.log(ogImage)
 
   return (
     <>
@@ -34,7 +43,7 @@ function Seo({ description, title }: SeoProps) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={ogImage.images.fallback.src} />
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
