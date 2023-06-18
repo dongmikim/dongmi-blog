@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={styles.wrapper}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || 'Dongmi Log'} />
       <div className={styles.container}>{children}</div>
       <Footer />
     </div>

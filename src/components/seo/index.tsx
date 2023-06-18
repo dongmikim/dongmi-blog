@@ -1,14 +1,32 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-type SeoProps = {
-  title: string
+interface ImageDataType {
+  images: {
+    fallback: {
+      src: string
+    }
+  }
+}
+interface SiteMetaProps {
+  site: {
+    siteMetadata: {
+      title?: string
+      description?: string
+      author?: string
+      siteUrl?: string
+    }
+  }
+  featuredImage?: ImageDataType
+}
+
+interface SeoProps {
+  title?: string
   description?: string
-  author?: string
 }
 
 function Seo({ description, title }: SeoProps) {
-  const { site, featuredImage } = useStaticQuery(
+  const { site, featuredImage } = useStaticQuery<SiteMetaProps>(
     graphql`
       query {
         site {
@@ -30,30 +48,33 @@ function Seo({ description, title }: SeoProps) {
     `,
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-  const ogImage = featuredImage?.childImageSharp?.gatsbyImageData
+  const { siteMetadata: meta } = site
 
-  console.log(ogImage)
+  const metaDescription = description || meta?.description
+  const defaultTitle = meta?.title as string
+  const ogImage = featuredImage?.childImageSharp?.gatsbyImageData.images
+    .fallback.src as string
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <title>{title ? `${title} | ${defaultTitle}` : defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta
-        property="og:image"
-        content={`${site.siteMetadata.siteUrl}${ogImage.images.fallback.src}`}
-      />
+      <meta property="og:image" content={`${meta.siteUrl}${ogImage}`} />
       <meta name="twitter:card" content="summary" />
-      <meta
-        name="twitter:creator"
-        content={site.siteMetadata?.author || 'Dongmi Kim'}
-      />
+      <meta name="twitter:creator" content={meta?.author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      <meta
+        name="twitter:twitter:image"
+        content={`${meta.siteUrl}${ogImage}`}
+      />
+      <meta
+        name="google-site-verification"
+        content="FxF7_235MJ6I82_Z7pGmkqQ2h9xDUVInviO5cgY3mnA"
+      ></meta>
     </>
   )
 }

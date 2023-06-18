@@ -14,7 +14,7 @@ type IndexPageProps = {
 }
 
 export function Head() {
-  return <Seo title="Posts" />
+  return <Seo />
 }
 
 function IndexPage({

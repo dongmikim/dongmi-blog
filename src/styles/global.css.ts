@@ -34,3 +34,7 @@ globalStyle('hr', {
   marginTop: 100,
   marginBottom: 100,
 })
+
+globalStyle('img', {
+  width: '100%',
+})
