@@ -81,6 +81,10 @@ globalStyle(`${postContent} a:not(.anchor):hover`, {
   color: color.blue,
 })
 
+globalStyle(`${postContent} a.gatsby-resp-image-link`, {
+  border: 0,
+})
+
 globalStyle(`${postContent} blockquote`, {
   marginTop: spacing.md,
   padding: `${spacing.sm} ${spacing.lg}`,
@@ -105,3 +109,7 @@ globalStyle(`${postContent} .gatsby-resp-image-wrapper`, {
   marginLeft: 'inherit !important',
   maxWidth: '650px !important',
 })
+
+// globalStyle(`${postContent} strong`, {
+//   boxShadow: 'inset 0 -10px 0 ##ffea04',
+// })
