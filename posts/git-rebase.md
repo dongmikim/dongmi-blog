@@ -1,7 +1,7 @@
 ---
 date: '2023-06-18'
 title: 'Git 협업을 위한 Rebase (feat. GitKraken)'
-categories: ['Strategy']
+categories: ['Git', 'Tool']
 summary: '다른 사람이랑 수정점이 겹쳤다면 침착하게 Rebase 받고 Push'
 ---
 
