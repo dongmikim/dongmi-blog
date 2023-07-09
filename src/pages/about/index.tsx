@@ -19,17 +19,8 @@ export default function AboutPage() {
         </div>
 
         <div className={styles.desc}>
-          <p>
-            공부하고 생각한 것을 평소에 노션으로 작성하고 있습니다. <br />그
-            중에서 정제된 내용을 이 블로그에 남기고 있습니다.
-          </p>
-          <p>
-            최대한 정확한 내용을 담으려고 노력합니다.
-            <br />
-            그럼에도 불구하고 잘못된 내용이 보인다면 말씀해 주세요.
-            <br />
-            피드백 좋아요 👍
-          </p>
+          <p>학습한 내용을 복습하고, 누군가에게 도움이 되고자 글을 씁니다.</p>
+          <p>요즘 협업하는 방식에 대해 관심이 많습니다.</p>
         </div>
 
         <section className={styles.section}>
