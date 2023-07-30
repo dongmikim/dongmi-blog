@@ -38,6 +38,13 @@ globalStyle('hr', {
 globalStyle('img', {
   width: '100%',
   maxWidth: '670px',
-  borderRadius: '10px',
-  boxShadow: '0 5px 10px rgba(0,0,0,0.2) !important',
+})
+
+globalStyle('table', {
+  width: '100%',
+})
+
+globalStyle('td', {
+  verticalAlign: 'top',
+  width: '50%',
 })
