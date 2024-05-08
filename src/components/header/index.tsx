@@ -12,26 +12,22 @@ export default function Header({ siteTitle }: HeaderProps) {
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
         <strong>{siteTitle}</strong>
-        <span className={styles.textGray}>:</span>{' '}
-        <span className={styles.textBlue}>&lt;👩🏻‍💻&gt;</span>
       </Link>
 
       <nav className={styles.nav}>
         <Link
-          to="/"
+          to="/posts"
           className={styles.navLink}
           activeClassName={styles.navLinkActive}
         >
           Posts
         </Link>
-        <Link
-          to="/about"
-          className={styles.navLink}
-          activeClassName={styles.navLinkActive}
-        >
-          About
-        </Link>
       </nav>
+      <Link to="https://www.linkedin.com/in/dongmi-kim-99a546226/">
+        LinkedIn
+      </Link>
+      <Link to="https://github.com/dongmikim">Github</Link>
+      <button>dark</button>
     </header>
   )
 }
