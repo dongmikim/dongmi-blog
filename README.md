@@ -1,10 +1,7 @@
-# Dongmi Log
+# Dongmi Blog
 
-개발기록을 담아요.
-
-- gatsby
-- react
-- typescript
-- vanila-extract
-
-test
+## Dependencies
+- nodejs@18
+- gatsby@5
+- vanilla-extract
+- pnpm
