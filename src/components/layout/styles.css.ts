@@ -4,6 +4,7 @@ import { sprinkles } from 'styles/sprinkles.css'
 export const wrapper = style({
   display: 'flex',
   flexDirection: 'column',
+  height: '100vh',
 })
 
 export const container = style([
