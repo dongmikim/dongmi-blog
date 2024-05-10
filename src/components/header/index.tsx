@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { createIcons, Linkedin, Github, Sun, Moon } from 'lucide';
@@ -9,16 +9,18 @@ type HeaderProps = {
   siteTitle: string
 }
 
-createIcons({
-  icons: {
-    Github,
-    Linkedin,
-    Sun,
-    Moon,
-  },
-})
 
 export default function Header({ siteTitle }: HeaderProps) {
+  useEffect(() => {
+    createIcons({
+      icons: {
+        Github,
+        Linkedin,
+        Sun,
+        Moon,
+      },
+    })
+  }, [])
 
   return (
     <header className={styles.header}>
