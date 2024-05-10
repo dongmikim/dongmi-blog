@@ -42,31 +42,21 @@ export const navLinkActive = style({
   opacity: 1.0,
 })
 
-// export const textGray = style([
-//   { color: colors.gray },
-//   sprinkles({
-//     display: {
-//       mobile: 'none',
-//     },
-//   }),
-// ])
-
-// export const textBlue = style([
-//   { color: colors.blue },
-//   sprinkles({
-//     display: {
-//       mobile: 'none',
-//     },
-//   }),
-// ])
+export const socialLinkGroup = style({
+  paddingRight: themes.spacing.md,
+  paddingLeft: themes.spacing.md,
+  borderRight: `1px solid #ccc`,
+  borderLeft: `1px solid #ccc`,
+})
 
 export const socialLink = style({
+  padding: `0 ${themes.spacing.sm}`,
   marginLeft: themes.spacing.sm,
-  fontSize: themes.fontSize.xl,
   color: colors.gray,
 })
 
 export const themeToggle = style({
   background: 'none',
   border: 'none',
+  color: colors.gray,
 })

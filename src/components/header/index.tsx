@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { createIcons, Linkedin, Github, Sun, Moon } from 'lucide';
+import { Linkedin, Github, Sun, Moon } from 'lucide-react'
 
 import * as styles from './styles.css'
 
@@ -9,19 +9,7 @@ type HeaderProps = {
   siteTitle: string
 }
 
-
 export default function Header({ siteTitle }: HeaderProps) {
-  useEffect(() => {
-    createIcons({
-      icons: {
-        Github,
-        Linkedin,
-        Sun,
-        Moon,
-      },
-    })
-  }, [])
-
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
@@ -44,19 +32,20 @@ export default function Header({ siteTitle }: HeaderProps) {
           Projects
         </Link>
       </nav>
-      <Link
-        to="https://www.linkedin.com/in/dongmi-kim-99a546226/"
-        className={styles.socialLink}
-      >
-        <i data-lucide="linkedin" />
-      </Link>
-      <Link to="https://github.com/dongmikim">
-        <i data-lucide="github" />
-      </Link>
-      {/* <button className={styles.themeToggle}>
-        <i data-lucide="sun" />
-        <i data-lucide="moon" />
-      </button> */}
+      <div className={styles.socialLinkGroup}>
+        <Link
+          to="https://www.linkedin.com/in/dongmi-kim-99a546226/"
+          className={styles.socialLink}
+        >
+          <Linkedin size={20} />
+        </Link>
+        <Link to="https://github.com/dongmikim" className={styles.socialLink}>
+          <Github size={20} />
+        </Link>
+      </div>
+      <button className={styles.themeToggle}>
+        <Sun size={20} />
+      </button>
     </header>
   )
 }
