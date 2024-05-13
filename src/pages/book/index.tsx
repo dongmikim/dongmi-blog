@@ -4,7 +4,7 @@ import Layout from 'components/layout'
 function IndexPage() {
   return (
     <Layout>
-      <h1 style={{ display: 'none' }}>Projects</h1>
+      <h1 style={{ display: 'none' }}>Books</h1>
       <p>추가중</p>
     </Layout>
   )

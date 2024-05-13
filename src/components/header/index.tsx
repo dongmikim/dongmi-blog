@@ -18,18 +18,18 @@ export default function Header({ siteTitle }: HeaderProps) {
 
       <nav className={styles.nav}>
         <Link
-          to="/posts"
+          to="/dev"
           className={styles.navLink}
           activeClassName={styles.navLinkActive}
         >
-          Posts
+          Dev
         </Link>
         <Link
-          to="/projects"
+          to="/book"
           className={styles.navLink}
           activeClassName={styles.navLinkActive}
         >
-          Projects
+          Book
         </Link>
       </nav>
       <div className={styles.socialLinkGroup}>
