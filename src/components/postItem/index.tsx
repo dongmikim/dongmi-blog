@@ -14,20 +14,20 @@ export default function PostItem({
   link,
 }: PostItemProps) {
   return (
-    <Link to={link}>
-      <article className={styles.postItem}>
-        {/* 카테고리 주석 */}
-        {/* <div className={styles.categoryWrapper}>
+    <article className={styles.postItem}>
+      {/* 카테고리 주석 */}
+      {/* <div className={styles.categoryWrapper}>
           {categories?.map(category => (
             <span className={styles.category} key={`${title}-${category}`}>
               {category}
             </span>
           ))}
         </div> */}
-        <span className={styles.date}>{date}</span>
+      <span className={styles.date}>{date}</span>
+      <Link to={link}>
         <h2 className={styles.postTitle}>{title}</h2>
-        <p className={styles.postSummary}>{summary}</p>
-      </article>
-    </Link>
+      </Link>
+      <p className={styles.postSummary}>{summary}</p>
+    </article>
   )
 }

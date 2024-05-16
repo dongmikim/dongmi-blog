@@ -22,7 +22,7 @@ export default function Header({ siteTitle }: HeaderProps) {
           className={styles.navLink}
           activeClassName={styles.navLinkActive}
         >
-          Dev
+          Posts
         </Link>
         {/* <Link
           to="/projects"

@@ -8,8 +8,8 @@ export const postItem = style({
   padding: '1rem 0',
 })
 
-globalStyle(`${postItem}:hover h2`, {
-  color: color.blue,
+globalStyle(`${postItem} a:hover h2`, {
+  color: color.primary,
 })
 
 export const categoryWrapper = style({

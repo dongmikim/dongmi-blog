@@ -22,18 +22,22 @@ function IndexPage({
     allMarkdownRemark: { edges },
   },
 }: IndexPageProps) {
-  const t = edges.flatMap(({ node }) => node)
+  const nodes = edges.flatMap(({ node }) => node)
 
-  const a = t.filter(_ => _.frontmatter.date.includes('2022'))
-  const b = t.filter(_ => _.frontmatter.date.includes('2023'))
+  const filterPostsByYear = (year: string) =>
+    nodes.filter(({ frontmatter: { date } }) => date.includes(year))
 
-  console.log('a', a)
-  console.log('b', b)
+  const years = [2024, 2023, 2022]
+
   return (
     <Layout>
       <h1 style={{ display: 'none' }}>Posts</h1>
-      <PostList posts={a} />
-      <PostList posts={b} />
+      <main style={{ maxWidth: '920px', margin: 'auto' }}>
+        {years.map(_ => {
+          const posts = filterPostsByYear(_.toString())
+          return <PostList posts={posts} year={_} />
+        })}
+      </main>
     </Layout>
   )
 }

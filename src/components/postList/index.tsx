@@ -6,12 +6,13 @@ import * as styles from './styles.css'
 
 type PostListProps = {
   posts: PostItemType[]
+  year: number
 }
 
-export default function PostList({ posts }: PostListProps) {
+export default function PostList({ posts, year }: PostListProps) {
   return (
-    <main className={styles.container}>
-      <span className={styles.year}>2023</span>
+    <section className={styles.container}>
+      <h3 className={styles.year}>{year}</h3>
       <ul className={styles.wrapper}>
         {posts.map(({ id, fields: { slug }, frontmatter }: PostItemType) => (
           <li key={id}>
@@ -19,6 +20,6 @@ export default function PostList({ posts }: PostListProps) {
           </li>
         ))}
       </ul>
-    </main>
+    </section>
   )
 }
