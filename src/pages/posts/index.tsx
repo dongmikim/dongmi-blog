@@ -22,10 +22,18 @@ function IndexPage({
     allMarkdownRemark: { edges },
   },
 }: IndexPageProps) {
+  const t = edges.flatMap(({ node }) => node)
+
+  const a = t.filter(_ => _.frontmatter.date.includes('2022'))
+  const b = t.filter(_ => _.frontmatter.date.includes('2023'))
+
+  console.log('a', a)
+  console.log('b', b)
   return (
     <Layout>
       <h1 style={{ display: 'none' }}>Posts</h1>
-      <PostList posts={edges} />
+      <PostList posts={a} />
+      <PostList posts={b} />
     </Layout>
   )
 }

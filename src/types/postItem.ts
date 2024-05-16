@@ -5,6 +5,16 @@ export type PostFrontmatterType = {
   summary: string
 }
 
+export type PostItemType = {
+  id: string
+  html: string
+  tableOfContents: string
+  fields: {
+    slug: string
+  }
+  frontmatter: PostFrontmatterType
+}
+
 export type PostListItemType = {
   node: {
     id: string

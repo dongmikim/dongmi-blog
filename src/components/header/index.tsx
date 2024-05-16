@@ -24,13 +24,13 @@ export default function Header({ siteTitle }: HeaderProps) {
         >
           Posts
         </Link>
-        <Link
+        {/* <Link
           to="/projects"
           className={styles.navLink}
           activeClassName={styles.navLinkActive}
         >
           Projects
-        </Link>
+        </Link> */}
       </nav>
       <div className={styles.socialLinkGroup}>
         <Link
