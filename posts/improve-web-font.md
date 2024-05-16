@@ -82,7 +82,7 @@ CDN을 사용할면서 폰트의 우선순위를 높이기 위해 preload 옵션
 preload를 설정할 경우, `as` 속성은 필수입니다. `as="style"`로 설정하여 CSS 파일임을 명확히 합니다.  
 `as`는 로드할 콘텐츠 타입을 의미합니다. 명시하지 않으면 리소스를 가져오지 않습니다.
 
-**crossorigin**
+**crossorigin**  
 `crossorigin`은 반드시 포함되어야 합니다.
 
 **onload**
@@ -93,7 +93,7 @@ preload를 설정할 경우, `as` 속성은 필수입니다. `as="style"`로 설
  
  참고: https://web.dev/articles/defer-non-critical-css?hl=ko
 
-> **rel**
+> **rel**  
 > - 현재 페이지에서 반드시 사용되는 리소스는 `preload` 합니다.
 > - 외부 도메인의 리소스는 `preconnect` 합니다.
 > - 미래에 사용되는 리소스는 `prefetch` 합니다.
@@ -102,15 +102,17 @@ preload를 설정할 경우, `as` 속성은 필수입니다. `as="style"`로 설
 ## 결과
 환경 (Disable Cache: On, Dev Server / Local)
 
-1. Critical Request Depth 개선
+### 1. Critical Request Depth 개선  
 브라우저는 폰트 CSS를 요청하고, 파일을 읽은 후 폰트를 적용하게 됩니다. 이 과정에서 로드 시간이 개선되었고, 렌더트리 생성이 빨라졌습니다.
 
-2. Lighthouse에서 에러 제거
+### 2. Lighthouse에서 에러 제거  
+
 <img src="./images/improve-web-font-01.png" alt="improve-web-font-01" />
 
 render-blocking 에러가 제거되었습니다.
 
-3. 렌더링 속도 개선
+### 3. 렌더링 속도 개선
+
 <img src="./images/improve-web-font-02.png" alt="improve-web-font-01" />
 
 10번 테스트했을 때, 평균 0.5초 ~ 0.7초로 로드 타임이 개선되었습니다.
@@ -118,7 +120,7 @@ render-blocking 에러가 제거되었습니다.
 > - DOMContentLoaded: waterfall에서 파란색 선으로 표시. DOM 트리를 그리는데 걸리는 시간  
 > - Load: waterfall에서 빨간색 선으로 표시. DOM 트리를 포함해 모든 리소스(이미지, 스타일시트 등)가 로드되기까지 시간
 
-### 적용된 코드 
+## 적용된 코드 
 
 ```html
 <head>
