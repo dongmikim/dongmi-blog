@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { StaticImage } from 'gatsby-plugin-image'
+
 import Layout from 'components/layout'
 import Seo from 'components/seo'
 
@@ -14,7 +16,9 @@ export default function AboutPage() {
     <Layout>
       <main className={styles.container}>
         <div className={styles.profile}>
-          <span>Avatar</span>
+          <span className={styles.avatar}>
+            <StaticImage src="../../images/avatar.png" alt="아바타 이미지" />
+          </span>
           <h1>Kaya</h1>
         </div>
         <div className={styles.greeting}>

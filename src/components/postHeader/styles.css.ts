@@ -23,16 +23,16 @@ export const postTitle = style({
 export const desc = style({
   display: 'flex',
   alignItems: 'center',
-  fontSize: themes.fontSize.xs,
-  color: themes.color.gray,
-  marginTop: themes.spacing.md,
+  fontSize: fontSize.xs,
+  color: color.gray,
+  marginTop: spacing.lg,
 })
 
 export const avatar = style({
   display: 'inline-block',
   width: 32,
   height: 32,
-  marginRight: spacing.sm,
+  marginRight: spacing.md,
   borderRadius: borderRadius.circle,
   overflow: 'hidden',
 })
@@ -45,8 +45,8 @@ export const date = style({
 globalStyle(`${date}::before`, {
   content: '',
   position: 'absolute',
-  top: 7,
-  left: -11,
+  top: 5,
+  left: -8,
   width: 3,
   height: 3,
   background: color.gray,
@@ -54,7 +54,7 @@ globalStyle(`${date}::before`, {
 
 export const divider = style({
   width: '10%',
-  margin: `${themes.spacing.mega} auto`,
-  borderColor: themes.color.skyblue50,
+  margin: `${spacing.mega} auto`,
+  borderColor: color.green50,
   borderWidth: 0.5,
 })

@@ -34,12 +34,14 @@ export const navLink = style({
   selectors: {
     '&:hover': {
       opacity: 1.0,
+      color: themes.color.primary,
     },
   },
 })
 
 export const navLinkActive = style({
   opacity: 1.0,
+  color: themes.color.primary,
 })
 
 export const socialLinkGroup = style({

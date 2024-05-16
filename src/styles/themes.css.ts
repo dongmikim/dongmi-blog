@@ -77,5 +77,6 @@ export const themes = createGlobalTheme(':root', {
     white: colors.white,
     category: colors.beige,
     primary: colors.green,
+    green50: '#87d77e',
   },
 })

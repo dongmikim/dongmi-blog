@@ -10,6 +10,7 @@ export const container = style({
   maxWidth: 920,
   margin: 'auto',
   fontSize: fontSize.lg,
+  paddingTop: spacing.xxxxl,
 })
 
 export const intro = style([
@@ -28,12 +29,12 @@ export const intro = style([
 
 globalStyle(`${intro} h1`, {
   display: 'inline-block',
-  fontSize: fontSize.xxxl,
+  fontSize: fontSize.mega,
 })
 
 export const desc = style({
   display: 'block',
-  paddingTop: spacing.md,
+  paddingTop: spacing.lg,
   fontSize: fontSize.md,
   color: color.gray,
 })
@@ -42,62 +43,19 @@ globalStyle(`${desc} p`, {
   marginBottom: spacing.md,
 })
 
-export const section = style({
-  paddingTop: spacing.xxxxl,
-})
-
-export const email = style({
-  marginTop: spacing.xxl,
-})
-
-export const experienceItem = style({
-  padding: `${spacing.xxxl} ${spacing.md}`,
-  borderBottom: `3px solid ${color.skyblue}`,
-})
-
-export const company = style([
-  {
-    display: 'inline-block',
-    color: themes.color.blue,
-  },
-  sprinkles({
-    width: {
-      mobile: 'auto',
-      tablet: '25%',
-      desktop: '25%',
-    },
-  }),
-])
-
-export const experienceDesc = style([
-  sprinkles({
-    display: {
-      mobile: 'block',
-    },
-  }),
-  {
-    fontSize: fontSize.sm,
-    color: themes.color.gray,
-  },
-])
-
-export const contactItem = style({
-  display: 'inline-flex',
-  paddingTop: spacing.lg,
-  marginRight: spacing.lg,
-  fontWeight: fontWeight.bold,
-  borderBottom: `3px solid ${color.skyblue}`,
-})
-
-globalStyle(`${contactItem}:hover a`, {
-  cursor: 'pointer',
-  color: themes.color.blue,
-})
-
 export const profile = style({
   display: 'flex',
   gap: spacing.md,
   marginBottom: spacing.xxxl,
+})
+
+export const avatar = style({
+  display: 'inline-block',
+  width: 32,
+  height: 32,
+  marginRight: spacing.md,
+  borderRadius: borderRadius.circle,
+  overflow: 'hidden',
 })
 
 export const greeting = style({
@@ -106,4 +64,5 @@ export const greeting = style({
 
 globalStyle(`${greeting} p`, {
   marginTop: spacing.lg,
+  lineHeight: lineHeight.xl,
 })

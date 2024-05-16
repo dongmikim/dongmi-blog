@@ -17,7 +17,7 @@ export default function PostHeader({
 }: PostHeaderProps) {
   return (
     <>
-      <div className={styles.categoryWrapper}>
+      {/* <div className={styles.categoryWrapper}>
         {categories?.map(category => {
           return (
             <span className={styles.category} key={`category-${category}`}>
@@ -25,13 +25,13 @@ export default function PostHeader({
             </span>
           )
         })}
-      </div>
+      </div> */}
       <h1 className={styles.postTitle}>{title}</h1>
       <div className={styles.desc}>
         <span className={styles.avatar}>
-          <StaticImage src="../../images/avatar.png" alt="A dinosaur" />
+          <StaticImage src="../../images/avatar.png" alt="아바타 이미지" />
         </span>
-        <span>덩미(Dongmi Kim)</span>
+        <span>카야</span>
         <span className={styles.date}>Last Updated {date}</span>
       </div>
 
