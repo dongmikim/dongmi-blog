@@ -9,6 +9,7 @@ const { spacing, fontSize, lineHeight, borderRadius, color, fontWeight } =
 export const container = style({
   maxWidth: 920,
   margin: 'auto',
+  fontSize: fontSize.lg,
 })
 
 export const intro = style([
@@ -91,4 +92,18 @@ export const contactItem = style({
 globalStyle(`${contactItem}:hover a`, {
   cursor: 'pointer',
   color: themes.color.blue,
+})
+
+export const profile = style({
+  display: 'flex',
+  gap: spacing.md,
+  marginBottom: spacing.xxxl,
+})
+
+export const greeting = style({
+  margin: '15px 0',
+})
+
+globalStyle(`${greeting} p`, {
+  marginTop: spacing.lg,
 })

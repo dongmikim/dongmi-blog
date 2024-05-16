@@ -8,3 +8,7 @@ export const wrapper = style({
   margin: 'auto',
   maxWidth: 920,
 })
+
+export const year = style({
+  color: 'red',
+})
