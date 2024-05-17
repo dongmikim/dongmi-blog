@@ -17,7 +17,12 @@ export default function AboutPage() {
       <main className={styles.container}>
         <div className={styles.profile}>
           <span className={styles.avatar}>
-            <StaticImage src="../../images/avatar.png" alt="아바타 이미지" />
+            <StaticImage
+              src="../images/avatar.png"
+              alt="아바타 이미지"
+              width={48}
+              height={48}
+            />
           </span>
           <h1>Kaya</h1>
         </div>

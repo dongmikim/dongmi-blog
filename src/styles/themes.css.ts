@@ -1,6 +1,7 @@
-import { createGlobalTheme } from '@vanilla-extract/css'
+import { createThemeContract, createGlobalTheme } from '@vanilla-extract/css'
 
 export const colors = {
+  black: '#383838',
   blue: '#0092db',
   beige: '#ffea04',
   green50: '#C6F6D5',
@@ -10,6 +11,11 @@ export const colors = {
   orange: '#ce9e5b',
   white: '#fff',
 }
+
+export const themeContract = createThemeContract({
+  backgroundColor: null,
+  textColor: null,
+})
 
 export const themes = createGlobalTheme(':root', {
   spacing: {
@@ -57,11 +63,6 @@ export const themes = createGlobalTheme(':root', {
     xl: '0.5rem',
     circle: '50%',
   },
-  font: {
-    header: 'Bebas Neue, cursive',
-    footer: 'Barlow Condensed, sans-serif',
-    cardTitle: 'Do Hyeon, sans-serif',
-  },
   borderColor: {
     grayOpacity: 'rgba(0,27,55,0.1)',
   },
@@ -75,4 +76,14 @@ export const themes = createGlobalTheme(':root', {
     orange: colors.orange,
     white: colors.white,
   },
+})
+
+export const lightTheme = createGlobalTheme('.light', themeContract, {
+  backgroundColor: '#fff',
+  textColor: colors.black,
+})
+
+export const darkTheme = createGlobalTheme('.dark', themeContract, {
+  backgroundColor: 'black',
+  textColor: colors.white,
 })

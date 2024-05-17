@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { themes, colors } from 'styles/themes.css'
+import { themes, themeContract, colors } from 'styles/themes.css'
 
 export const header = style({
   zIndex: 1,
@@ -12,7 +12,7 @@ export const header = style({
   width: '100%',
   maxWidth: 920,
   margin: '0 auto',
-  background: '#fff',
+  backgroundColor: themeContract.backgroundColor,
 })
 
 export const logo = style({

@@ -15,7 +15,7 @@ globalStyle('html,body', {
   fontSize: 14,
   fontFamily:
     'Pretendard,SF Pro KR,SF Pro Display,SF Pro Icons,-apple-system,BlinkMacSystemFont,Basier Square,Apple SD Gothic Neo,Roboto,Noto Sans KR,Noto Sans,Helvetica Neue,Helvetica,Arial,sans-serif',
-  color: '#383838',
+  // color: '#383838',
 })
 
 globalStyle(

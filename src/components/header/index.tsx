@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { Linkedin, Github, Sun, Moon } from 'lucide-react'
@@ -9,13 +9,22 @@ type HeaderProps = {
   siteTitle: string
 }
 
+type Theme = 'light' | 'dark'
+
 export default function Header({ siteTitle }: HeaderProps) {
+  const [theme, setTheme] = useState<Theme>('light')
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+    document.body.className = newTheme
+  }
+
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
         <StaticImage src="../../images/logo.png" alt={siteTitle} width={80} />
       </Link>
-
       <nav className={styles.nav}>
         <Link
           to="/posts"
@@ -36,9 +45,9 @@ export default function Header({ siteTitle }: HeaderProps) {
           <Github size={20} />
         </Link>
       </div>
-      {/* <button className={styles.themeToggle}>
-        <Sun size={20} />
-      </button> */}
+      <button className={styles.themeToggle} onClick={toggleTheme}>
+        {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
+      </button>
     </header>
   )
 }
