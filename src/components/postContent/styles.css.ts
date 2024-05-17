@@ -75,7 +75,7 @@ globalStyle(`${postContent} code`, {
 globalStyle(`${postContent} a:not(.anchor)`, {
   paddingTop: spacing.xs,
   fontWeight: fontWeight.bold,
-  borderBottom: `2px solid ${color.green50}`,
+  borderBottom: `2px solid ${color.primary50}`,
 })
 
 globalStyle(`${postContent} a:not(.anchor):hover`, {
@@ -89,7 +89,7 @@ globalStyle(`${postContent} a.gatsby-resp-image-link`, {
 globalStyle(`${postContent} blockquote`, {
   marginTop: spacing.md,
   padding: `${spacing.sm} ${spacing.lg}`,
-  borderLeft: `5px solid ${color.green50}`,
+  borderLeft: `5px solid ${color.primary50}`,
   color: color.gray,
 })
 

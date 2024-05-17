@@ -55,6 +55,6 @@ globalStyle(`${date}::before`, {
 export const divider = style({
   width: '10%',
   margin: `${spacing.mega} auto`,
-  borderColor: color.green50,
+  borderColor: color.primary50,
   borderWidth: 0.5,
 })
