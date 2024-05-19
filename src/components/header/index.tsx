@@ -23,7 +23,8 @@ export default function Header({ siteTitle }: HeaderProps) {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        {theme === 'light' ? (
+        <StaticImage src="../../images/logo.png" alt={siteTitle} height={40} />
+        {/* {theme === 'light' ? (
           <StaticImage
             src="../../images/logo.png"
             alt={siteTitle}
@@ -35,7 +36,7 @@ export default function Header({ siteTitle }: HeaderProps) {
             alt={siteTitle}
             height={40}
           />
-        )}
+        )} */}
       </Link>
       <nav className={styles.nav}>
         <Link
@@ -57,9 +58,9 @@ export default function Header({ siteTitle }: HeaderProps) {
           <Github size={20} />
         </Link>
       </div>
-      <button className={styles.themeToggle} onClick={toggleTheme}>
+      {/* <button className={styles.themeToggle} onClick={toggleTheme}>
         {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
-      </button>
+      </button> */}
     </header>
   )
 }
