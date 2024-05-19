@@ -6,13 +6,12 @@ import Footer from 'components/footer'
 import * as styles from './styles.css'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  if (
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  ) {
-    document.body.className = 'dark'
-  } else {
-    document.body.className = 'light'
+  if (window?.matchMedia) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.className = 'dark'
+    } else {
+      document.body.className = 'light'
+    }
   }
 
   const data = useStaticQuery(graphql`
