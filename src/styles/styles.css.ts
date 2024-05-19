@@ -45,14 +45,15 @@ globalStyle(`${desc} p`, {
 
 export const profile = style({
   display: 'flex',
+  alignItems: 'center',
   gap: spacing.md,
   marginBottom: spacing.xxxl,
 })
 
 export const avatar = style({
   display: 'inline-block',
-  width: 32,
-  height: 32,
+  width: 48,
+  height: 48,
   marginRight: spacing.md,
   borderRadius: borderRadius.circle,
   overflow: 'hidden',
@@ -60,6 +61,27 @@ export const avatar = style({
 
 export const greeting = style({
   margin: '15px 0',
+})
+
+export const introDesc = style({
+  marginTop: spacing.xxxxl,
+  marginLeft: spacing.xxl,
+})
+
+globalStyle(`${introDesc} li`, {
+  position: 'relative',
+  marginTop: spacing.xl,
+})
+
+globalStyle(`${introDesc} li::before`, {
+  content: '',
+  position: 'absolute',
+  top: 9,
+  left: -15,
+  width: 5,
+  height: 5,
+  borderRadius: themes.borderRadius.circle,
+  background: themes.color.gray,
 })
 
 globalStyle(`${greeting} p`, {

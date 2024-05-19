@@ -29,11 +29,15 @@ export default function AboutPage() {
         <div className={styles.greeting}>
           <p>안녕하세요. 프론트엔드 개발자 카야입니다.</p>
           <p>
-            현재는 글로벌 덴탈 회사에서 플랫폼과 어드민을 개발하고 있습니다.
-            <br />
-            Vue와 React를 사용하고 있습니다.
+            현재는 글로벌 덴탈 플랫폼과 사내 어드민을 개발하고 있으며, Vue와
+            React를 사용하고 있습니다. <br /> 요즘은 성능 최적화에 관심이
+            있습니다.
           </p>
         </div>
+        <ul className={styles.introDesc}>
+          <li>개발 외, 평양냉면과 러닝, 독서를 좋아합니다.</li>
+          <li>Email: dongmi.public@gmail.com</li>
+        </ul>
       </main>
     </Layout>
   )
