@@ -7,7 +7,9 @@ interface PostContentProps {
 }
 
 export default function PostContent({ html }: PostContentProps) {
-  deckDeckGoHighlightElement()
+  deckDeckGoHighlightElement().catch(error => {
+    console.error('Error occurred from deckDeckGoHighlightElement: ', error)
+  })
 
   return (
     <div
