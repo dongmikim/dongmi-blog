@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { themes, colors } from 'styles/themes.css'
-import { sprinkles } from 'styles/sprinkles.css'
+import { themes, themeContract, colors } from 'styles/themes.css'
 
 export const header = style({
   zIndex: 1,
@@ -12,8 +11,8 @@ export const header = style({
   padding: `${themes.spacing.xxxl} ${themes.spacing.sm}`,
   width: '100%',
   maxWidth: 920,
-  margin: 'auto',
-  background: '#fff',
+  margin: '0 auto',
+  backgroundColor: themeContract.backgroundColor,
 })
 
 export const logo = style({
@@ -27,30 +26,39 @@ export const nav = style({
 })
 
 export const navLink = style({
-  height: '100%',
   padding: 10,
-  fontWeight: themes.fontWeight.bold,
+  fontWeight: themes.fontWeight.medium,
   fontSize: themes.fontSize.lg,
+  transition: 'opacity .2s ease',
+  opacity: '.6',
+  selectors: {
+    '&:hover': {
+      opacity: 1.0,
+      color: themes.color.primary,
+    },
+  },
 })
 
 export const navLinkActive = style({
-  color: colors.blue,
+  opacity: 1.0,
+  color: themes.color.primary,
 })
 
-export const textGray = style([
-  { color: colors.gray },
-  sprinkles({
-    display: {
-      mobile: 'none',
-    },
-  }),
-])
+export const socialLinkGroup = style({
+  paddingRight: themes.spacing.md,
+  paddingLeft: themes.spacing.md,
+  borderRight: `1px solid #ccc`,
+  borderLeft: `1px solid #ccc`,
+})
 
-export const textBlue = style([
-  { color: colors.blue },
-  sprinkles({
-    display: {
-      mobile: 'none',
-    },
-  }),
-])
+export const socialLink = style({
+  padding: `0 ${themes.spacing.sm}`,
+  marginLeft: themes.spacing.sm,
+  color: colors.gray,
+})
+
+export const themeToggle = style({
+  background: 'none',
+  border: 'none',
+  color: colors.gray,
+})

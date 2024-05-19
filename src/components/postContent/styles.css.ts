@@ -54,10 +54,10 @@ globalStyle(`${postContent} ul li`, {
 globalStyle(`${postContent} ul li::before`, {
   content: '',
   position: 'absolute',
-  top: 13,
+  top: 9,
   left: -15,
-  width: 6,
-  height: 6,
+  width: 5,
+  height: 5,
   borderRadius: borderRadius.circle,
   background: color.gray,
 })
@@ -67,18 +67,19 @@ globalStyle(`${postContent} code`, {
   paddingLeft: spacing.sm,
   borderRadius: borderRadius.sm,
   background: `rgba(181,220,221, 0.5)`,
-  color: color.blue,
+  color: color.primary,
   fontWeight: fontWeight.bold,
   fontSize: fontSize.sm,
 })
 
 globalStyle(`${postContent} a:not(.anchor)`, {
+  paddingTop: spacing.xs,
   fontWeight: fontWeight.bold,
-  borderBottom: `3px solid ${color.skyblue}`,
+  borderBottom: `2px solid ${color.primary50}`,
 })
 
 globalStyle(`${postContent} a:not(.anchor):hover`, {
-  color: color.blue,
+  color: color.primary,
 })
 
 globalStyle(`${postContent} a.gatsby-resp-image-link`, {
@@ -88,7 +89,7 @@ globalStyle(`${postContent} a.gatsby-resp-image-link`, {
 globalStyle(`${postContent} blockquote`, {
   marginTop: spacing.md,
   padding: `${spacing.sm} ${spacing.lg}`,
-  borderLeft: `5px solid ${color.skyblue50}`,
+  borderLeft: `5px solid ${color.primary50}`,
   color: color.gray,
 })
 
@@ -102,7 +103,7 @@ globalStyle(`${postContent} blockquote p`, {
   marginBottom: spacing.sm,
 })
 
-globalStyle(`${postContent} p + ul`, { marginTop: '-15px' })
+// globalStyle(`${postContent} p + ul`, { marginTop: '-15px' })
 
 globalStyle(`${postContent} .gatsby-resp-image-wrapper`, {
   marginRight: 'inherit !important',

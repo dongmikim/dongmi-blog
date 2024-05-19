@@ -5,12 +5,11 @@ import { sprinkles } from 'styles/sprinkles.css'
 const { spacing, fontSize, fontWeight, borderRadius, color } = themes
 
 export const postItem = style({
-  padding: '2rem 0',
-  borderBottom: '1px solid #ddd',
+  padding: '1rem 0',
 })
 
-globalStyle(`${postItem}:hover h2`, {
-  color: color.blue,
+globalStyle(`${postItem} a:hover h2`, {
+  color: color.primary,
 })
 
 export const categoryWrapper = style({
@@ -29,18 +28,33 @@ export const category = style({
 // export const postTitle = style([utils.text3Lg, {}])
 export const postTitle = style([
   {
-    marginBottom: 20,
+    marginTop: 5,
+    marginBottom: 10,
+    fontWeight: fontWeight.medium,
   },
   sprinkles({
     fontSize: {
-      desktop: 'xxl',
-      tablet: 'xxl',
-      mobile: 'xl',
+      desktop: 'xl',
+      tablet: 'xl',
+      mobile: 'md',
     },
   }),
 ])
 
-export const postSummary = style({
-  fontSize: 18,
-  color: 'gray',
+export const postSummary = style([
+  {
+    color: color.gray,
+  },
+  sprinkles({
+    fontSize: {
+      desktop: 'md',
+      tablet: 'md',
+      mobile: 'sm',
+    },
+  }),
+])
+
+export const date = style({
+  color: '#ccc',
+  fontSize: fontSize.sm,
 })
