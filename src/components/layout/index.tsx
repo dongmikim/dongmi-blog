@@ -6,7 +6,7 @@ import Footer from 'components/footer'
 import * as styles from './styles.css'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  if (window?.matchMedia) {
+  if (typeof window !== 'undefined' && window.matchMedia) {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.className = 'dark'
     } else {
