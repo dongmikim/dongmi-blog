@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `카야 블로그`,
-    description: `프론트엔드 개발 블로그`,
+    title: `카야 개발 블로그`,
+    description: `JavaScript, TypeScript, React, Vue, 성능 최적화에 관련된 프론트엔드 개발 정보를 공유하는 블로그입니다.`,
     author: `@DongmiKim`,
     siteUrl: `https://dongmi.dev/`,
   },

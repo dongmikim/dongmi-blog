@@ -40,7 +40,7 @@ export default function Header({ siteTitle }: HeaderProps) {
       </Link>
       <nav className={styles.nav}>
         <Link
-          to="/posts"
+          to="/"
           className={styles.navLink}
           activeClassName={styles.navLinkActive}
         >

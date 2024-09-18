@@ -1,44 +1,69 @@
 import React from 'react'
-
-import { StaticImage } from 'gatsby-plugin-image'
-
+import { graphql } from 'gatsby'
 import Layout from 'components/layout'
 import Seo from 'components/seo'
+import PostList from 'components/postList'
+import { PostListItemType } from 'types/postItem'
 
-import * as styles from '../styles/styles.css'
-
-export function Head() {
-  return <Seo title={'About'} description={'소개'} />
+type IndexPageProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: PostListItemType[]
+    }
+  }
 }
 
-export default function AboutPage() {
+export function Head() {
+  return <Seo />
+}
+
+const YEARS = [2024, 2023, 2022]
+
+function IndexPage({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}: IndexPageProps) {
+  const nodes = edges.flatMap(({ node }) => node)
+
+  const filterPostsByYear = (year: string) =>
+    nodes.filter(({ frontmatter: { date } }) => date.includes(year))
+
   return (
     <Layout>
-      <main className={styles.container}>
-        <div className={styles.profile}>
-          <span className={styles.avatar}>
-            <StaticImage
-              src="../images/avatar.png"
-              alt="아바타 이미지"
-              width={48}
-              height={48}
-            />
-          </span>
-          <h1>Kaya</h1>
-        </div>
-        <div className={styles.greeting}>
-          <p>안녕하세요. 프론트엔드 개발자 카야입니다.</p>
-          <p>
-            현재는 글로벌 덴탈 플랫폼과 사내 어드민을 개발하고 있으며, Vue와
-            React를 사용하고 있습니다. <br /> 요즘은 성능 최적화에 관심이
-            있습니다.
-          </p>
-        </div>
-        <ul className={styles.introDesc}>
-          <li>개발 외, 평양냉면과 러닝, 독서를 좋아합니다.</li>
-          <li>Email: dongmi.public@gmail.com</li>
-        </ul>
+      <h1 style={{ display: 'none' }}>Posts</h1>
+      <main style={{ maxWidth: '920px', margin: 'auto' }}>
+        {YEARS.map(_ => {
+          const posts = filterPostsByYear(_.toString())
+          return <PostList posts={posts} year={_} />
+        })}
       </main>
     </Layout>
   )
 }
+
+export default IndexPage
+
+export const getPostList = graphql`
+  query getPostList {
+    allMarkdownRemark(
+      sort: [{ frontmatter: { date: DESC } }, { frontmatter: { title: ASC } }]
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          tableOfContents
+          frontmatter {
+            title
+            summary
+            date(formatString: "YYYY.MM.DD.")
+            categories
+          }
+        }
+      }
+    }
+  }
+`
