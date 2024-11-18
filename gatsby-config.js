@@ -1,12 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `카야 개발 블로그`,
+    title: `카야 | 프론트엔드 개발 블로그`,
     description: `JavaScript, TypeScript, React, Vue, 성능 최적화에 관련된 프론트엔드 개발 정보를 공유하는 블로그입니다.`,
     author: `@DongmiKim`,
-    siteUrl: `https://dongmi.dev/`,
+    siteUrl: `https://kayaa.vercel.app/`,
   },
   graphqlTypegen: true,
   plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-vanilla-extract',
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
@@ -14,7 +18,6 @@ module.exports = {
         allExtensions: true,
       },
     },
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,8 +49,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-vanilla-extract`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
