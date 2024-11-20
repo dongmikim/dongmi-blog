@@ -73,8 +73,8 @@ function Seo({ description, title }: SeoProps) {
       />
       <meta
         name="google-site-verification"
-        content="FxF7_235MJ6I82_Z7pGmkqQ2h9xDUVInviO5cgY3mnA"
-      ></meta>
+        content="iTY7mkmlSlt3iy_mmLsi6ZcuMvHKzKlcig-Kmcfeazs"
+      />
     </>
   )
 }
