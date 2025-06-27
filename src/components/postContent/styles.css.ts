@@ -33,6 +33,7 @@ globalStyle(`${postContent} h2, ${postContent} h3,  ${postContent} h4`, {
 globalStyle(`${postContent} p`, {
   marginTop: spacing.lg,
   marginBottom: spacing.lg,
+  lineHeight: lineHeight.xl,
 })
 
 globalStyle(`${postContent} ol`, {
