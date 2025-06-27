@@ -8,6 +8,9 @@ export const wrapper = style({
 })
 
 export const container = style([
+  {
+    paddingTop: 100,
+  },
   sprinkles({
     paddingRight: {
       mobile: 'lg',

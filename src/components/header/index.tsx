@@ -24,32 +24,11 @@ export default function Header({ siteTitle }: HeaderProps) {
     <header className={styles.header}>
       <div className={styles.headerInner}>
         <Link to="/" className={styles.logo}>
-          <StaticImage
-            src="../../images/avatar.png"
-            alt={siteTitle}
-            height={40}
-          />
+          <StaticImage src="../../images/avatar.png" alt={siteTitle} height={40} />
           <strong className={styles.logoText}>Kaya Devlog</strong>
-          {/* {theme === 'light' ? (
-          <StaticImage
-            src="../../images/logo.png"
-            alt={siteTitle}
-            height={40}
-          />
-        ) : (
-          <StaticImage
-            src="../../images/logo_dark.png"
-            alt={siteTitle}
-            height={40}
-          />
-        )} */}
         </Link>
         <nav className={styles.nav}>
-          <Link
-            to="/"
-            className={styles.navLink}
-            activeClassName={styles.navLinkActive}
-          >
+          <Link to="/" className={styles.navLink} activeClassName={styles.navLinkActive}>
             Posts
           </Link>
         </nav>
