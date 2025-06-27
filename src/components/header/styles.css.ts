@@ -1,24 +1,34 @@
 import { style } from '@vanilla-extract/css'
-import { themes, themeContract, colors } from 'styles/themes.css'
+import { themes, colors } from 'styles/themes.css'
 
 export const header = style({
   zIndex: 1,
   position: 'sticky',
   top: 0,
   left: 0,
+  backgroundColor: themes.backgroundColor.default,
+})
+
+export const headerInner = style({
   display: 'flex',
   alignItems: 'center',
   padding: `${themes.spacing.xxxl} ${themes.spacing.sm}`,
   width: '100%',
   maxWidth: 920,
   margin: '0 auto',
-  backgroundColor: themeContract.backgroundColor,
 })
 
 export const logo = style({
-  height: '100%',
-  fontSize: themes.fontSize.xxl,
-  fontWeight: 700,
+  display: 'flex',
+  alignItems: 'center',
+})
+
+export const logoText = style({
+  paddingLeft: themes.spacing.lg,
+  fontSize: themes.fontSize.xxxl,
+  fontWeight: themes.fontWeight.medium,
+  fontFamily: 'Reenie Beanie',
+  color: themes.color.primary,
 })
 
 export const nav = style({

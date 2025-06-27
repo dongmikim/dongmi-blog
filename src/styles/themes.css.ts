@@ -1,21 +1,17 @@
-import { createThemeContract, createGlobalTheme } from '@vanilla-extract/css'
+import { createGlobalTheme } from '@vanilla-extract/css'
 
 export const colors = {
   black: '#383838',
   blue: '#0092db',
-  beige: '#ffea04',
+  beige: '#ffe1ad',
   green50: '#C6F6D5',
   green100: '#5fad56',
   gray: '#8d9da3',
   red: '#ba3f724',
-  orange: '#ce9e5b',
+  orange: '#ff8872',
   white: '#fff',
+  brown: '#bf8e6e',
 }
-
-export const themeContract = createThemeContract({
-  backgroundColor: null,
-  textColor: null,
-})
 
 export const themes = createGlobalTheme(':root', {
   spacing: {
@@ -66,24 +62,21 @@ export const themes = createGlobalTheme(':root', {
   borderColor: {
     grayOpacity: 'rgba(0,27,55,0.1)',
   },
+  backgroundColor: {
+    default: colors.white,
+  },
+  typography: {
+    default: colors.black,
+  },
   color: {
-    primary: colors.green100,
-    primary50: colors.green50,
+    primary: colors.orange,
+    primary50: colors.beige,
     blue: colors.blue,
     beige: colors.beige,
     gray: colors.gray,
     red: colors.red,
     orange: colors.orange,
     white: colors.white,
+    brown: colors.brown,
   },
-})
-
-export const lightTheme = createGlobalTheme('.light', themeContract, {
-  backgroundColor: '#fff',
-  textColor: colors.black,
-})
-
-export const darkTheme = createGlobalTheme('.dark', themeContract, {
-  backgroundColor: 'black',
-  textColor: colors.white,
 })
