@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { StaticImage } from 'gatsby-plugin-image'
-
 import * as styles from './styles.css'
 
 type PostHeaderProps = {
@@ -28,9 +26,6 @@ export default function PostHeader({
       </div> */}
       <h1 className={styles.postTitle}>{title}</h1>
       <div className={styles.desc}>
-        <span className={styles.avatar}>
-          <StaticImage src="../../images/avatar.png" alt="아바타 이미지" />
-        </span>
         <span>카야</span>
         <span className={styles.date}>Last Updated {date}</span>
       </div>

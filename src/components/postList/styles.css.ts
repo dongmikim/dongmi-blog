@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css'
 import { themes } from 'styles/themes.css'
-// import * as utils from 'styles/utils.css'
 
 const { spacing, color, fontWeight } = themes
 
@@ -11,7 +10,6 @@ export const container = style({
 
 export const wrapper = style({
   position: 'relative',
-  zIndex: 1,
 })
 
 export const year = style({
@@ -20,6 +18,6 @@ export const year = style({
   left: '-2rem',
   fontSize: '5rem',
   fontWeight: fontWeight.bold,
-  opacity: '0.2',
-  color: color.primary,
+  opacity: '0.4',
+  color: color.primary50,
 })

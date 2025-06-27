@@ -22,45 +22,31 @@ export default function Header({ siteTitle }: HeaderProps) {
 
   return (
     <header className={styles.header}>
-      <Link to="/" className={styles.logo}>
-        <StaticImage src="../../images/logo.png" alt={siteTitle} height={40} />
-        {/* {theme === 'light' ? (
-          <StaticImage
-            src="../../images/logo.png"
-            alt={siteTitle}
-            height={40}
-          />
-        ) : (
-          <StaticImage
-            src="../../images/logo_dark.png"
-            alt={siteTitle}
-            height={40}
-          />
-        )} */}
-      </Link>
-      <nav className={styles.nav}>
-        <Link
-          to="/"
-          className={styles.navLink}
-          activeClassName={styles.navLinkActive}
-        >
-          Posts
+      <div className={styles.headerInner}>
+        <Link to="/" className={styles.logo}>
+          <StaticImage src="../../images/avatar.png" alt={siteTitle} height={40} />
+          <strong className={styles.logoText}>Kaya Devlog</strong>
         </Link>
-      </nav>
-      <div className={styles.socialLinkGroup}>
-        <Link
-          to="https://www.linkedin.com/in/dongmi-kim-99a546226/"
-          className={styles.socialLink}
-        >
-          <Linkedin size={20} />
-        </Link>
-        <Link to="https://github.com/dongmikim" className={styles.socialLink}>
-          <Github size={20} />
-        </Link>
-      </div>
-      {/* <button className={styles.themeToggle} onClick={toggleTheme}>
+        <nav className={styles.nav}>
+          <Link to="/" className={styles.navLink} activeClassName={styles.navLinkActive}>
+            Posts
+          </Link>
+        </nav>
+        <div className={styles.socialLinkGroup}>
+          <Link
+            to="https://www.linkedin.com/in/dongmi-kim-99a546226/"
+            className={styles.socialLink}
+          >
+            <Linkedin size={20} />
+          </Link>
+          <Link to="https://github.com/dongmikim" className={styles.socialLink}>
+            <Github size={20} />
+          </Link>
+        </div>
+        {/* <button className={styles.themeToggle} onClick={toggleTheme}>
         {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
       </button> */}
+      </div>
     </header>
   )
 }

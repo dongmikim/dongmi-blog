@@ -8,8 +8,8 @@ export const postItem = style({
   padding: '1rem 0',
 })
 
-globalStyle(`${postItem} a:hover h2`, {
-  color: color.primary,
+globalStyle(`${postItem} a:hover h3`, {
+  color: color.brown,
 })
 
 export const categoryWrapper = style({
@@ -25,7 +25,6 @@ export const category = style({
   fontWeight: fontWeight.medium,
 })
 
-// export const postTitle = style([utils.text3Lg, {}])
 export const postTitle = style([
   {
     marginTop: 5,

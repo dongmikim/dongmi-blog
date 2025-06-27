@@ -28,15 +28,6 @@ export const desc = style({
   marginTop: spacing.lg,
 })
 
-export const avatar = style({
-  display: 'inline-block',
-  width: 32,
-  height: 32,
-  marginRight: spacing.md,
-  borderRadius: borderRadius.circle,
-  overflow: 'hidden',
-})
-
 export const date = style({
   position: 'relative',
   marginLeft: spacing.lg,

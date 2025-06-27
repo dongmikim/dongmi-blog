@@ -1,25 +1,45 @@
 import { style } from '@vanilla-extract/css'
-import { themes, themeContract, colors } from 'styles/themes.css'
+import { sprinkles } from 'styles/sprinkles.css'
+import { themes, colors } from 'styles/themes.css'
 
 export const header = style({
   zIndex: 1,
-  position: 'sticky',
+  position: 'fixed',
   top: 0,
   left: 0,
+  right: 0,
+  backgroundColor: 'rgba(255,255,255,0.7)',
+  backdropFilter: 'blur(8px)',
+})
+
+export const headerInner = style({
   display: 'flex',
   alignItems: 'center',
   padding: `${themes.spacing.xxxl} ${themes.spacing.sm}`,
   width: '100%',
   maxWidth: 920,
   margin: '0 auto',
-  backgroundColor: themeContract.backgroundColor,
 })
 
 export const logo = style({
-  height: '100%',
-  fontSize: themes.fontSize.xxl,
-  fontWeight: 700,
+  display: 'flex',
+  alignItems: 'center',
 })
+
+export const logoText = style([
+  {
+    paddingLeft: themes.spacing.lg,
+    fontSize: themes.fontSize.xxxl,
+    fontWeight: themes.fontWeight.medium,
+    fontFamily: 'Reenie Beanie',
+    color: themes.color.primary,
+  },
+  sprinkles({
+    display: {
+      mobile: 'none',
+    },
+  }),
+])
 
 export const nav = style({
   marginLeft: 'auto',

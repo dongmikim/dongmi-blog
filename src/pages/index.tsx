@@ -31,7 +31,7 @@ function IndexPage({
 
   return (
     <Layout>
-      <h1 style={{ display: 'none' }}>Posts</h1>
+      <h1 className="sr-only">Posts</h1>
       <main style={{ maxWidth: '920px', margin: 'auto' }}>
         {YEARS.map(_ => {
           const posts = filterPostsByYear(_.toString())

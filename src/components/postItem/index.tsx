@@ -25,7 +25,7 @@ export default function PostItem({
         </div> */}
       <span className={styles.date}>{date}</span>
       <Link to={link}>
-        <h2 className={styles.postTitle}>{title}</h2>
+        <h3 className={styles.postTitle}>{title}</h3>
       </Link>
       <p className={styles.postSummary}>{summary}</p>
     </article>
