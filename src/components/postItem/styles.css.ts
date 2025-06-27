@@ -9,7 +9,7 @@ export const postItem = style({
 })
 
 globalStyle(`${postItem} a:hover h2`, {
-  color: color.primary,
+  color: color.brown,
 })
 
 export const categoryWrapper = style({
@@ -25,7 +25,6 @@ export const category = style({
   fontWeight: fontWeight.medium,
 })
 
-// export const postTitle = style([utils.text3Lg, {}])
 export const postTitle = style([
   {
     marginTop: 5,
