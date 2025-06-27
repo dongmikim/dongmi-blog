@@ -12,7 +12,7 @@ type PostListProps = {
 export default function PostList({ posts, year }: PostListProps) {
   return (
     <section className={styles.container}>
-      <h3 className={styles.year}>{year}</h3>
+      <h2 className={styles.year}>{year}</h2>
       <ul className={styles.wrapper}>
         {posts.map(({ id, fields: { slug }, frontmatter }: PostItemType) => (
           <li key={id}>
