@@ -26,20 +26,13 @@ export const logo = style({
   alignItems: 'center',
 })
 
-export const logoText = style([
-  {
-    paddingLeft: themes.spacing.lg,
-    fontSize: themes.fontSize.xxxl,
-    fontWeight: themes.fontWeight.medium,
-    fontFamily: 'Reenie Beanie',
-    color: themes.color.primary,
-  },
-  sprinkles({
-    display: {
-      mobile: 'none',
-    },
-  }),
-])
+export const logoText = style({
+  paddingLeft: themes.spacing.lg,
+  fontSize: themes.fontSize.xxxl,
+  fontWeight: themes.fontWeight.medium,
+  fontFamily: 'Reenie Beanie',
+  color: themes.color.primary,
+})
 
 export const nav = style({
   marginLeft: 'auto',
