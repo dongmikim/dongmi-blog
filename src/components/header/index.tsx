@@ -23,7 +23,11 @@ export default function Header({ siteTitle }: HeaderProps) {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        <StaticImage src="../../images/logo.png" alt={siteTitle} height={40} />
+        <StaticImage
+          src="../../images/avatar.png"
+          alt={siteTitle}
+          height={40}
+        />
         {/* {theme === 'light' ? (
           <StaticImage
             src="../../images/logo.png"
