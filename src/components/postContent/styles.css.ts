@@ -1,11 +1,11 @@
 import { globalStyle, style } from '@vanilla-extract/css'
 import { themes } from 'styles/themes.css'
 
-const { spacing, fontSize, lineHeight, borderRadius, color, fontWeight } =
-  themes
+const { spacing, fontSize, lineHeight, borderRadius, color, fontWeight } = themes
 
 export const postContent = style({
   lineHeight: lineHeight.lg,
+  fontSize: fontSize.lg,
 })
 
 globalStyle(`${postContent} h2`, {
@@ -43,6 +43,10 @@ globalStyle(`${postContent} ol, ${postContent} ul`, {
   marginLeft: spacing.lg,
 })
 
+globalStyle(`${postContent} ol p, ${postContent} ul p`, {
+  marginBottom: 0,
+})
+
 globalStyle(`${postContent} ul ul`, {
   marginBottom: spacing.lg,
 })
@@ -66,7 +70,7 @@ globalStyle(`${postContent} code`, {
   paddingRight: spacing.sm,
   paddingLeft: spacing.sm,
   borderRadius: borderRadius.sm,
-  background: `rgba(181,220,221, 0.5)`,
+  background: color.orange20,
   color: color.primary,
   fontWeight: fontWeight.bold,
   fontSize: fontSize.sm,

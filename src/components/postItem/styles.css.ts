@@ -8,7 +8,7 @@ export const postItem = style({
   padding: '1rem 0',
 })
 
-globalStyle(`${postItem} a:hover h2`, {
+globalStyle(`${postItem} a:hover h3`, {
   color: color.brown,
 })
 
